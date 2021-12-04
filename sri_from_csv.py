@@ -61,9 +61,9 @@ def main():
     trailing_epochs = len(sleep)%args.epochs
     sleep = sleep[:args.epochs*n_days]
     
-    print('Found %i epochs and %i complete days. Discarding %i trailing epochs' % (n_epochs,n_days,trailing_epochs))
-    print('Found %i missing sleep values, which will be ignored during SRI calculation' % np.sum(np.isnan(sleep)))
-    print('\nThe calculated SRI is %.4f' % (sri(sleep,epochs_per_day=args.epochs)))
+    print(f'Found {n_epochs} epochs and {n_days} complete days. Discarding {trailing_epochs} trailing epochs')
+    print(f'Found {np.sum(np.isnan(sleep))} missing sleep values, which will be ignored during SRI calculation')
+    print(f'\nThe calculated SRI is {(sri(sleep,epochs_per_day=args.epochs)): .4f}')
     
 if __name__ == "__main__":
     main()
