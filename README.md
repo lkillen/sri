@@ -1,4 +1,4 @@
-# sri
+# Calculation of Sleep Regularity Index
 
 Calculation of Sleep Regularity Index (SRI) as originally described by Phillips et al: 
 https://www.nature.com/articles/s41598-017-03171-4
