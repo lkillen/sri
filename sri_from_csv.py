@@ -48,7 +48,7 @@ def main():
                         help='column name in line 1 of \'fn\' (csv file) to be used as sleep values (default: sleep)')
     args = parser.parse_args()
     
-    print('\nCalculating SRI values from the %s column of %s based on %i epochs per day' % (args.column,args.fn,args.epochs))
+    print(f'\nCalculating SRI values from the {args.column} column of {args.fn} based on {args.epochs} epochs per day')
     
     df = pd.read_csv(args.fn)
     if len(df.columns)<2:
